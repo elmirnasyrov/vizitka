@@ -1,0 +1,183 @@
+/* Личная страничка по brand/DESIGN.md, направление «День». Версия 2: продающая */
+:root {
+  --fon: #FFFFFF; --poverhnost: #F4F4F6; --tekst: #0A0A0A; --tekst-2: #5C5C66;
+  --akcent: #2B59FF; --akcent-navedenie: #2147D9; --na-akcente: #FFFFFF; --marker: #FFC93C; --linii: #E6E6EA;
+  /* тёмная версия для блока кейсов */
+  --t-fon: #0A0A0A; --t-poverhnost: #1A1A1D; --t-tekst-2: #A1A1AA; --t-akcent: #6E8BFF; --t-linii: #2A2A2F;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--fon); color: var(--tekst);
+  font-family: "Onest", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px; line-height: 28px; -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+.konteyner { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+h1 { margin: 0; font-weight: 800; font-size: 60px; line-height: 64px; letter-spacing: -0.035em; }
+h1 span, h2 span { color: var(--akcent); }
+h2 { margin: 0; font-weight: 800; font-size: 48px; line-height: 52px; letter-spacing: -0.02em; max-width: 860px; }
+h3 { margin: 0; font-weight: 800; font-size: 24px; line-height: 30px; letter-spacing: -0.01em; }
+p { margin: 0; }
+.lid { font-size: 20px; line-height: 30px; color: var(--tekst-2); max-width: 680px; }
+.nadstrochnik { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--akcent); }
+.beydzh {
+  align-self: flex-start; display: inline-block; background: var(--marker); color: var(--tekst);
+  font-size: 13px; font-weight: 600; line-height: 20px; padding: 4px 12px; border-radius: 999px;
+}
+
+/* Кнопки */
+.knopki { display: flex; gap: 12px; flex-wrap: wrap; }
+.knopka {
+  min-height: 52px; padding: 0 28px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center;
+  font-size: 17px; font-weight: 600; text-decoration: none; transition: background .15s;
+}
+.knopka-osnovnaya { background: var(--akcent); color: var(--na-akcente); }
+.knopka-osnovnaya:hover { background: var(--akcent-navedenie); }
+.knopka-vtoraya { background: var(--poverhnost); color: var(--tekst); border: 1px solid var(--linii); }
+.knopka-vtoraya:hover { background: var(--linii); }
+.knopka-malaya { min-height: 44px; padding: 0 20px; font-size: 16px; background: var(--akcent); color: var(--na-akcente); }
+.knopka-malaya:hover { background: var(--akcent-navedenie); }
+.knopka-belaya { background: var(--fon); color: var(--akcent); }
+.knopka-belaya:hover { background: #E8EDFF; }
+
+/* Шапка */
+.shapka { display: flex; align-items: center; gap: 32px; padding-top: 20px; padding-bottom: 20px; }
+.logo { font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+.menyu { display: flex; gap: 24px; margin-left: auto; font-size: 16px; font-weight: 500; }
+.menyu a { color: var(--tekst); text-decoration: none; }
+.menyu a:hover { color: var(--akcent); }
+
+/* Первый экран */
+.geroy { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 48px; align-items: center; padding-top: 48px; padding-bottom: 64px; }
+.geroy-tekst { display: flex; flex-direction: column; gap: 24px; }
+
+/* Макет чата */
+.chat { margin: 0; background: var(--poverhnost); border-radius: 40px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.chat-shapka { display: flex; align-items: center; gap: 12px; padding: 4px 8px 12px; border-bottom: 1px solid var(--linii); }
+.chat-shapka b { display: block; font-size: 16px; line-height: 20px; }
+.chat-shapka small { font-size: 14px; color: var(--tekst-2); }
+.chat-ava { width: 40px; height: 40px; border-radius: 50%; background: var(--akcent); color: #fff; display: grid; place-items: center; font-weight: 800; }
+.chat-telo { display: flex; flex-direction: column; gap: 10px; padding: 8px 4px; }
+.soobshchenie { background: var(--fon); border-radius: 20px 20px 20px 6px; padding: 16px 18px 10px; font-size: 16px; line-height: 24px; max-width: 92%; display: flex; flex-direction: column; gap: 6px; }
+.soobshchenie > b { margin-bottom: 4px; }
+.soobshchenie p { margin-top: 6px; }
+.stroka { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px dashed var(--linii); padding-bottom: 4px; }
+.stroka span { color: var(--tekst-2); }
+.vazhno { background: var(--marker); border-radius: 999px; padding: 0 10px; }
+.soobshchenie time { align-self: flex-end; font-size: 14px; color: var(--tekst-2); }
+.soobshchenie.moe { align-self: flex-end; background: var(--akcent); color: #fff; border-radius: 20px 20px 6px 20px; flex-direction: row; align-items: flex-end; gap: 10px; padding: 10px 14px; }
+.soobshchenie.moe time { color: #DCE3FF; }
+.chat figcaption { font-size: 14px; line-height: 20px; color: var(--tekst-2); padding: 0 8px 4px; }
+
+/* Полоса фактов */
+.fakty { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--linii); border-bottom: 1px solid var(--linii); }
+.fakty div { padding: 28px 24px 28px 0; display: flex; flex-direction: column; gap: 4px; }
+.fakty div + div { padding-left: 24px; border-left: 1px solid var(--linii); }
+.fakty b { font-size: 40px; line-height: 44px; font-weight: 800; letter-spacing: -0.02em; color: var(--akcent); }
+.fakty span { font-size: 15px; line-height: 22px; color: var(--tekst-2); }
+
+/* Секции */
+.sekciya { display: flex; flex-direction: column; gap: 24px; padding-top: 120px; }
+.setka { display: grid; gap: 20px; margin-top: 16px; }
+.setka-4 { grid-template-columns: repeat(4, 1fr); }
+.bol { background: var(--poverhnost); border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+.bol b { font-size: 15px; color: var(--akcent); font-weight: 700; }
+.bol p { font-size: 17px; line-height: 26px; }
+
+.predlozheniya { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 16px; }
+.predlozheniya article { display: flex; flex-direction: column; gap: 12px; }
+.predlozheniya img { border-radius: 28px; margin-bottom: 8px; }
+.predlozheniya p { font-size: 16px; line-height: 25px; color: var(--tekst-2); }
+
+/* Кейсы на тёмном */
+.temnaya { background: var(--t-fon); color: #fff; margin-top: 120px; }
+.sekciya-v-temnoy { display: flex; flex-direction: column; gap: 24px; padding-top: 96px; padding-bottom: 96px; }
+.temnaya .nadstrochnik { color: var(--t-akcent); }
+.temnaya .lid { color: var(--t-tekst-2); }
+.keys { background: var(--t-poverhnost); border-radius: 28px; padding: 40px; display: grid; grid-template-columns: 1fr 2fr; gap: 24px 48px; margin-top: 8px; }
+.keys-zagolovok { display: flex; flex-direction: column; gap: 14px; }
+.bylo-stalo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.bylo-stalo small { display: block; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--t-tekst-2); margin-bottom: 8px; }
+.bylo-stalo div + div small { color: var(--t-akcent); }
+.bylo-stalo p { font-size: 16px; line-height: 25px; color: #D4D4D8; }
+.bylo-stalo div + div p { color: #fff; }
+.dlya-tebya { grid-column: 2; border-top: 1px solid var(--t-linii); padding-top: 20px; font-size: 16px; line-height: 25px; color: #D4D4D8; }
+.dlya-tebya b { color: var(--marker); font-weight: 600; }
+
+/* Шаги */
+.shagi { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: shag; }
+.shagi li { counter-increment: shag; border-top: 3px solid var(--akcent); padding-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+.shagi li::before { content: "0" counter(shag); font-size: 15px; font-weight: 700; color: var(--akcent); }
+.shagi b { font-size: 22px; line-height: 28px; font-weight: 800; }
+.shagi p { font-size: 16px; line-height: 25px; color: var(--tekst-2); }
+
+/* Кто я */
+.pochemu { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
+.pochemu-foto { border-radius: 40px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 100% 30%; width: 100%; }
+.pochemu-tekst { display: flex; flex-direction: column; gap: 20px; }
+.pochemu-tekst p { color: var(--tekst-2); max-width: 560px; }
+.plyusy { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.plyusy li { position: relative; padding-left: 36px; font-weight: 500; }
+.plyusy li::before { content: ""; position: absolute; left: 0; top: 2px; width: 24px; height: 24px; border-radius: 50%; background: var(--akcent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center / 16px no-repeat; }
+
+/* Вопросы */
+.voprosy { display: flex; flex-direction: column; margin-top: 8px; border-top: 1px solid var(--linii); }
+.voprosy details { border-bottom: 1px solid var(--linii); }
+.voprosy summary { cursor: pointer; list-style: none; padding: 24px 48px 24px 0; font-size: 20px; line-height: 28px; font-weight: 600; position: relative; }
+.voprosy summary::-webkit-details-marker { display: none; }
+.voprosy summary::after { content: "+"; position: absolute; right: 8px; top: 20px; font-size: 28px; color: var(--akcent); font-weight: 400; }
+.voprosy details[open] summary::after { content: "−"; }
+.voprosy details p { padding: 0 48px 24px 0; color: var(--tekst-2); max-width: 760px; }
+
+/* Связь */
+.svyaz {
+  background: var(--akcent); color: var(--na-akcente); border-radius: 40px; padding: 72px 64px;
+  display: flex; flex-direction: column; gap: 24px; align-items: flex-start;
+}
+.svyaz p { font-size: 20px; line-height: 30px; max-width: 640px; color: #E8EDFF; }
+
+.podval { padding-top: 64px; padding-bottom: 40px; font-size: 14px; color: var(--tekst-2); }
+
+/* Планшет */
+@media (max-width: 1000px) {
+  .geroy, .pochemu { grid-template-columns: 1fr; }
+  .chat { max-width: 520px; }
+  .setka-4, .shagi, .fakty { grid-template-columns: 1fr 1fr; }
+  .fakty div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .fakty div:nth-child(n+3) { border-top: 1px solid var(--linii); }
+  .predlozheniya { grid-template-columns: 1fr 1fr; }
+  .keys { grid-template-columns: 1fr; }
+  .dlya-tebya { grid-column: 1; }
+  .pochemu-foto { max-width: 420px; }
+}
+/* Телефон */
+@media (max-width: 600px) {
+  body { font-size: 17px; line-height: 26px; }
+  .konteyner { padding: 0 16px; }
+  .menyu { display: none; }
+  .logo { margin-right: auto; }
+  h1 { font-size: 40px; line-height: 44px; }
+  h2 { font-size: 30px; line-height: 34px; }
+  h3 { font-size: 21px; line-height: 26px; }
+  .lid, .svyaz p { font-size: 17px; line-height: 26px; }
+  .geroy { gap: 32px; padding-top: 16px; padding-bottom: 48px; }
+  .knopki .knopka { width: 100%; }
+  .chat { border-radius: 28px; padding: 14px; }
+  .fakty b { font-size: 32px; line-height: 36px; }
+  .fakty div { padding: 20px 12px 20px 0; }
+  .fakty div + div { padding-left: 12px; }
+  .fakty div:nth-child(3) { padding-left: 0; }
+  .sekciya { padding-top: 72px; }
+  .setka-4, .predlozheniya, .shagi, .bylo-stalo { grid-template-columns: 1fr; }
+  .temnaya { margin-top: 72px; }
+  .sekciya-v-temnoy { padding-top: 64px; padding-bottom: 64px; }
+  .keys { padding: 24px; }
+  .pochemu-foto { border-radius: 28px; }
+  .voprosy summary { font-size: 18px; line-height: 26px; padding: 20px 40px 20px 0; }
+  .voprosy summary::after { top: 16px; }
+  .voprosy details p { padding-right: 0; }
+  .svyaz { padding: 40px 24px; border-radius: 28px; }
+  .svyaz .knopka { width: 100%; }
+}
