@@ -88,7 +88,17 @@ p { margin: 0; }
 
 .predlozheniya { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 16px; }
 .predlozheniya article { display: flex; flex-direction: column; gap: 12px; }
-.predlozheniya img { border-radius: 28px; margin-bottom: 8px; }
+.predlozheniya article { background: var(--poverhnost); border-radius: 28px; padding: 32px; }
+.ikonka { width: 48px; height: 48px; border-radius: 50%; background: var(--akcent); color: #fff; display: grid; place-items: center; margin-bottom: 8px; }
+.ikonka svg { width: 24px; height: 24px; }
+.shema { margin-top: auto; padding-top: 12px; display: flex; flex-direction: column; align-items: stretch; gap: 6px; }
+.shema > div { border-radius: 16px; padding: 12px 16px; font-size: 15px; line-height: 22px; font-weight: 500; }
+.shema small { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px; }
+.shema-bylo { background: var(--fon); color: var(--tekst-2); }
+.shema-bylo small { color: var(--tekst-2); }
+.shema-stalo { background: var(--akcent); color: #fff; }
+.shema-stalo small { color: #DCE3FF; }
+.shema-strelka { align-self: center; color: var(--akcent); font-weight: 700; line-height: 16px; }
 .predlozheniya p { font-size: 16px; line-height: 25px; color: var(--tekst-2); }
 
 /* Кейсы на тёмном */
@@ -115,7 +125,7 @@ p { margin: 0; }
 
 /* Кто я */
 .pochemu { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
-.pochemu-foto { border-radius: 40px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 100% 30%; width: 100%; }
+.pochemu-foto { border-radius: 40px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; width: 100%; }
 .pochemu-tekst { display: flex; flex-direction: column; gap: 20px; }
 .pochemu-tekst p { color: var(--tekst-2); max-width: 560px; }
 .plyusy { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
@@ -136,6 +146,7 @@ p { margin: 0; }
   background: var(--akcent); color: var(--na-akcente); border-radius: 40px; padding: 72px 64px;
   display: flex; flex-direction: column; gap: 24px; align-items: flex-start;
 }
+.svyaz .beydzh { margin-bottom: -8px; }
 .svyaz p { font-size: 20px; line-height: 30px; max-width: 640px; color: #E8EDFF; }
 
 .podval { padding-top: 64px; padding-bottom: 40px; font-size: 14px; color: var(--tekst-2); }
@@ -164,6 +175,7 @@ p { margin: 0; }
   .lid, .svyaz p { font-size: 17px; line-height: 26px; }
   .geroy { gap: 32px; padding-top: 16px; padding-bottom: 48px; }
   .knopki .knopka { width: 100%; }
+  .predlozheniya article { padding: 24px; }
   .chat { border-radius: 28px; padding: 14px; }
   .fakty b { font-size: 32px; line-height: 36px; }
   .fakty div { padding: 20px 12px 20px 0; }
